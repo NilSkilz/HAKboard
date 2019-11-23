@@ -1,0 +1,30 @@
+config:
+  home:
+    latitude: 50.0
+    longitude: -5.0
+  work:
+    latitude: 50.0
+    longitude: -5.0
+  widgets:
+    weather:
+      dark_sky_secret: 'ADD_API_KEY'
+    clock:
+      type: '12'
+      show_seconds: true
+    calendar:
+      url: 'CALDEV_URL'
+    todoist:
+      key: 'ADD_API_KEY'
+    traffic:
+      google_traffic_api_key: 'ADD_API_KEY'
+    tides:
+      world_tides_api_key: 'ADD_API_KEY'
+    home_assistant:
+      url: 'https://YOUR_URL'
+      long_lived_access_token: 'ADD_API_KEY'
+      entities:
+        - lock.front_door_lock
+        - alarm_control_panel.home
+        - sensor.living_room_thermostat_temperature
+        - sensor.snug_sensor_temperature
+        - sensor.electricity_usage

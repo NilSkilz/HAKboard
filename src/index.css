@@ -1,0 +1,89 @@
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", */
+  /* "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", */
+  /* sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #fff;
+  text-shadow: 2px 2px 4px #444;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+h4 {
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+p {
+  font-size: 0.75rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+hr {
+  background-color: white;
+  margin: 0;
+}
+
+.rbc-off-range-bg {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.rbc-today {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.rbc-day-bg,
+.rbc-row-bg,
+.rbc-month-row,
+.rbc-row,
+.rbc-month-header,
+.rbc-month-view,
+.rbc-calendar,
+.rbc-header {
+  border-color: transparent !important;
+}
+
+.rbc-day-bg {
+  border-top-color: rgba(255, 255, 255, 0.2) !important;
+  border-top-style: solid;
+  border-top-width: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.rbc-event-content {
+  font-size: 0.75rem;
+}
