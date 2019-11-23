@@ -16,7 +16,7 @@ class Todoist extends Component {
   }
 
   fetchTodos = () => {
-    const { todoist = {} } = widgets;
+    const { todoist = {} } = this.props.config.widgets;
     const { key } = todoist;
     Axios.get(`https://api.todoist.com/rest/v1/tasks`, {
       headers: { Authorization: `Bearer ${key}` }
