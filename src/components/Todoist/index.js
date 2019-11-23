@@ -59,10 +59,4 @@ const mapStateToProps = state => {
   };
 };
 
-const mapStateToProps = state => {
-  return {
-    config: state.config.widgets.home_assistant
-  };
-};
-
 export default connect(mapStateToProps)(Todoist);
