@@ -21,7 +21,7 @@ const layout = [
   { i: 'a', x: 0, y: 0, w: 4, h: 2, component: 'Time', config: { is24Hour: true, showSeconds: true } },
   { i: 'b', x: 9, y: 0, w: 3, h: 2, component: 'Date' },
   { i: 'c', x: 0, y: 3, w: 2, h: 4, component: 'Weather' },
-  { i: 'd', x: 10, y: 3, w: 6, h: 2, component: 'WeatherForcast' },
+  { i: 'd', x: 10, y: 3, w: 6, h: 4, component: 'WeatherForcast' },
 ];
 
 // const bottomItems = [<Weather />, <Traffic />, <HomeAssistant />];
