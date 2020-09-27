@@ -1,22 +1,22 @@
-import { combineReducers } from 'redux';
+import { ADD_CONFIG, REFRESH_VIEW, SET_EDIT_MODE, SET_MODAL } from './actions';
 
-import { ADD_CONFIG, REFRESH_VIEW } from './actions';
-
-function config(state = { widgets: [], refresh: false }, action) {
+function config(state = { config: { widgets: [] }, refresh: false, editMode: false }, action) {
   switch (action.type) {
     case ADD_CONFIG:
-      return { ...state, ...action.config };
+      return { ...state, config: action.config };
+
+    case SET_EDIT_MODE:
+      return { ...state, editMode: action.editMode };
 
     case REFRESH_VIEW:
       return { ...state, refresh: action.refresh };
+
+    case SET_MODAL:
+      return { ...state, modal: action.modal };
 
     default:
       return state;
   }
 }
 
-const hakboard = combineReducers({
-  config
-});
-
-export default hakboard;
+export default config;

@@ -7,6 +7,9 @@ import hakboard from './containers/reducers';
 import { createStore } from 'redux';
 import * as serviceWorker from './serviceWorker';
 
+import './assets/css/sass/main.scss';
+import './assets/css/bootstrap.css';
+
 const store = createStore(hakboard);
 
 ReactDOM.render(

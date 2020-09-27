@@ -87,3 +87,8 @@ hr {
 .rbc-event-content {
   font-size: 0.75rem;
 }
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}

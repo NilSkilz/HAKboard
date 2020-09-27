@@ -29,21 +29,21 @@ class Weather extends Component {
     }
   };
 
-  getMaxTemp = days => {
+  getMaxTemp = (days) => {
     const { data } = this.state;
-    const dayData = data.daily.data.find(day => moment.unix(day.time).isSame(moment().add(days, 'days'), 'day'));
+    const dayData = data.daily.data.find((day) => moment.unix(day.time).isSame(moment().add(days, 'days'), 'day'));
     return dayData.temperatureMax.toFixed(1);
   };
 
-  getMinTemp = days => {
+  getMinTemp = (days) => {
     const { data } = this.state;
-    const dayData = data.daily.data.find(day => moment.unix(day.time).isSame(moment().add(days, 'days'), 'day'));
+    const dayData = data.daily.data.find((day) => moment.unix(day.time).isSame(moment().add(days, 'days'), 'day'));
     return dayData.temperatureMin.toFixed(1);
   };
 
-  getIcon = days => {
+  getIcon = (days) => {
     const { data } = this.state;
-    const dayData = data.daily.data.find(day => moment.unix(day.time).isSame(moment().add(days, 'days'), 'day'));
+    const dayData = data.daily.data.find((day) => moment.unix(day.time).isSame(moment().add(days, 'days'), 'day'));
     return dayData.icon;
   };
 
@@ -52,20 +52,10 @@ class Weather extends Component {
     if (!data) return null;
     return (
       <div className='d-flex flex-row justify-content-between w-100' style={{ height: '200px' }}>
-        <div className='d-flex flex-fill flex-grow flex-column m-3 align-items-start'>
-          <h6>{data.currently.summary}</h6>
-          <h2>{data.currently.apparentTemperature.toFixed(1)}°C</h2>
-        </div>
-        {[0, 1, 2, 3, 4].map(index => {
+        {[0, 1, 2, 3, 4].map((index) => {
           return (
             <WeatherDay
-              day={
-                index !== 0
-                  ? moment()
-                      .add(index, 'days')
-                      .format('ddd')
-                  : 'Today'
-              }
+              day={index !== 0 ? moment().add(index, 'days').format('ddd') : 'Today'}
               icon={this.getIcon(index)}
               maxTemp={this.getMaxTemp(index)}
               minTemp={this.getMinTemp(index)}
@@ -77,10 +67,10 @@ class Weather extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     config: state.config,
-    refresh: state.config.refresh
+    refresh: state.config.refresh,
   };
 };
 

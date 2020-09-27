@@ -21,7 +21,7 @@ class Date extends Component {
   render() {
     const { day, date } = this.state;
     return (
-      <div className='d-flex flex-column mb-0 align-items-end m-3'>
+      <div className='d-flex flex-column mb-0 align-items-end m-3 centerful'>
         <div className='d-flex flex-row'>
           <h2 style={{ color: '#fff' }}>{day}</h2>
         </div>
@@ -33,9 +33,9 @@ class Date extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    config: state.config.widgets.clock
+    config: state.config.widgets.clock,
   };
 };
 
