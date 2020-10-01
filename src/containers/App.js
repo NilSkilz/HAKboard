@@ -20,8 +20,9 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 const layout = [
   { i: 'a', x: 0, y: 0, w: 4, h: 2, component: 'Time', config: { is24Hour: true, showSeconds: true } },
   { i: 'b', x: 9, y: 0, w: 3, h: 2, component: 'Date' },
-  { i: 'c', x: 0, y: 3, w: 2, h: 4, component: 'Weather' },
-  { i: 'd', x: 10, y: 3, w: 6, h: 4, component: 'WeatherForcast' },
+  { i: 'c', x: 0, y: 23, w: 2, h: 4, component: 'Weather' },
+  { i: 'd', x: 10, y: 23, w: 6, h: 4, component: 'WeatherForcast' },
+  { i: 'd', x: 0, y: 13, w: 6, h: 4, component: 'Traffic' },
 ];
 
 // const bottomItems = [<Weather />, <Traffic />, <HomeAssistant />];
@@ -50,32 +51,32 @@ class App extends Component {
 
     //	Load Locked Config
     //--------------------------------------------------------//
-    Axios.get('./config.yml')
-      .then((lockedConfig) => {
-        const config = yaml.safeLoad(lockedConfig.data);
+    // Axios.get('./config.yml')
+    //   .then((lockedConfig) => {
+    //     const config = yaml.safeLoad(lockedConfig.data);
 
-        // console.log(lockedConfig);
+    //     // console.log(lockedConfig);
 
-        this.props.addConfig(config.config);
+    //     this.props.addConfig(config.config);
 
-        //	Save
-        //--------------------------------------------------------//
-        this.setState({
-          isLoading: false,
-          isLoaded: true,
-          hasLoaded: true,
-          isError: false,
-        });
-      })
-      .catch((error) => {
-        this.setState({
-          isLoading: false,
-          isLoaded: false,
-          isError: true,
-          hasErrored: true,
-        });
-        console.error(error);
-      });
+    //     //	Save
+    //     //--------------------------------------------------------//
+    //     this.setState({
+    //       isLoading: false,
+    //       isLoaded: true,
+    //       hasLoaded: true,
+    //       isError: false,
+    //     });
+    //   })
+    //   .catch((error) => {
+    //     this.setState({
+    //       isLoading: false,
+    //       isLoaded: false,
+    //       isError: true,
+    //       hasErrored: true,
+    //     });
+    //     console.error(error);
+    //   });
   };
 
   // next = () => {
